@@ -1,0 +1,23 @@
+.wrapper {
+	font-family: 'Inconsolata', monospace;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	margin: auto;
+	grid-template-columns: [start] 1fr 1fr [end];
+	margin-top: 32px;
+	margin-bottom: 32px;
+	max-width: 1200px;
+}
+
+.btn {
+	font-family: 'Inconsolata', monospace;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	margin: auto;
+	grid-template-columns: [start] 1fr 1fr [end];
+	cursor: pointer;
+	border: none;
+	background-color: inherit;
+}

@@ -1,0 +1,18 @@
+.wrapper {
+	margin-bottom: 1rem;
+}
+
+#btn {
+	display: inline-block;
+	transition: 0.2s all ease;
+	opacity: 0 !important;
+}
+
+.wrapper #btn:hover {
+	opacity: 1 !important;
+}
+
+.p {
+	display: inline-block;
+	margin-bottom: 0;
+}

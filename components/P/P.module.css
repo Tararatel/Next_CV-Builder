@@ -1,0 +1,27 @@
+.p {
+	margin: 0;
+}
+
+.verySmall {
+	font-size: 14px;
+	line-height: 17px;
+	color: #828282;
+}
+
+.small {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.medium {
+	font-weight: 400;
+	font-size: 34px;
+	line-height: 42px;
+}
+
+.large {
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 59px;
+}
