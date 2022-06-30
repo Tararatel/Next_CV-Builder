@@ -5,11 +5,11 @@ import { ForwardedRef, useEffect, useState } from 'react';
 import CameraIcon from './camera.svg';
 
 export const Avatar = ({ className, ...props }: AvatarProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
-	const [selectedFile, setSelectedFile] = useState<MediaSource>();
+	const [selectedFile, setSelectedFile] = useState<null | File>();
 	const [preview, setPreview] = useState<HTMLDivElement>();
 
-	useEffect((): any => {
-		const objectUrl: string | any = selectedFile && URL.createObjectURL(selectedFile);
+	useEffect(() => {
+		const objectUrl: any = selectedFile && URL.createObjectURL(selectedFile);
 		setPreview(objectUrl);
 
 		return () => URL.revokeObjectURL(objectUrl);
@@ -22,7 +22,7 @@ export const Avatar = ({ className, ...props }: AvatarProps, ref: ForwardedRef<H
 				id="Avatar"
 				type="file"
 				value=""
-				onChange={(e) => setSelectedFile(e.target.files[0])}
+				onChange={(e: any): void => setSelectedFile(e.target.files[0])}
 			/>
 			<label className={styles.label} htmlFor="Avatar">
 				{preview ? (

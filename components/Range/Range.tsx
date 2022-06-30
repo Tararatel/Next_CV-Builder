@@ -1,7 +1,7 @@
 import { RangeProps } from './Range.props';
 import styles from './Range.module.css';
 import { P } from '../P/P';
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 
 export const Range = ({ ...props }: RangeProps): JSX.Element => {
 	const [value, setValue] = useState<number>(90);
@@ -18,7 +18,7 @@ export const Range = ({ ...props }: RangeProps): JSX.Element => {
 				max="100"
 				step="10"
 				value={value}
-				onChange={(e) => setValue(e.target.value)}
+				onChange={(e): void => setValue(parseInt(e.target.value))}
 			/>
 		</div>
 	);

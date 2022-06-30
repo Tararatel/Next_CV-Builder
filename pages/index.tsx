@@ -11,7 +11,7 @@ const Home: NextPage = () => {
 	const [skillsCounter, setSkillsCounter] = useState(1);
 	const [worksCounter, setWorksCounter] = useState(1);
 
-	const componentRef = useRef();
+	const componentRef = useRef<any>();
 	const handlePrintClick = useReactToPrint({
 		content: () => componentRef.current,
 	});
@@ -68,12 +68,7 @@ const Home: NextPage = () => {
 									Stanford University - BS Electrical Engineering
 								</P>
 
-								<Title
-									isUppercase
-									isShowButton
-									onClick={() => setWorksCounter(worksCounter + 1)}
-									style={{ marginTop: '3.6rem' }}
-								>
+								<Title isShowButton onClick={() => setWorksCounter(worksCounter + 1)} style={{ marginTop: '3.6rem' }}>
 									Work experience:
 								</Title>
 								{new Array(worksCounter).fill(1).map((_, i) => (
@@ -82,12 +77,7 @@ const Home: NextPage = () => {
 									</P>
 								))}
 
-								<Title
-									isUppercase
-									isShowButton
-									onClick={() => setSkillsCounter(skillsCounter + 1)}
-									style={{ marginTop: '3rem' }}
-								>
+								<Title isShowButton onClick={() => setSkillsCounter(skillsCounter + 1)} style={{ marginTop: '3rem' }}>
 									Skills:
 								</Title>
 

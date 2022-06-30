@@ -2,7 +2,6 @@
 import { HeaderProps } from './Header.props';
 import styles from './Header.module.css';
 import { ForwardedRef } from 'react';
-import Link from 'next/link';
 import { P } from '../P/P';
 import PrintIcon from './print.svg';
 
